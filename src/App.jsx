@@ -16,7 +16,7 @@ function App() {
   const [editDesc, setEditDesc] = useState('')
 
   // API
-  const API_URL = 'http://localhost:5000/items'
+  const API_URL = 'https://todo-app-knvs.onrender.com/items'
 
   // handle submit
   const handleSubmit = () => {
@@ -78,36 +78,6 @@ function App() {
 
   // update
   const handleUpdate = () => {
-    // if (editTitle.trim() !== '' && editDesc.trim() !== '') {
-    //   fetch(`${API_URL}/todos/:${editId}`, {
-    //     method: 'PUT',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ title: editTitle, desc: editDesc }),
-    //   }).then((res) => {
-    //     if (res.ok) {
-    //       // Updated item
-    //       {
-    //         const updatedTodo = todos.map((item) => {
-    //           if (item._id == editId) {
-    //             item.title == editTitle
-    //             item.desc == editDesc
-    //           }
-    //           return item
-    //         })
-    //       }
-    //       setTodos(updatedTodo)
-
-    //       setSuccess('Item Updated successfully!')
-    //       setTimeout(() => {
-    //         setSuccess('')
-    //       }, 3000)
-    //       setEditId(-1)
-    //     }
-    //   })
-    // }
-
     // validate inputs
     if (editTitle.trim() !== '' && editDesc.trim() !== '') {
       fetch(`${API_URL}/todos/${editId}`, {
